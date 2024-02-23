@@ -1,0 +1,68 @@
+swagger: "2.0"
+info:
+  description: "ToDo アプリケーションの API"
+  version: "1.0.0"
+  title: "ToDo API"
+
+# ホストと基本パスの設定
+host: "localhost:5000"
+basePath: "/"
+
+# 使用するスキーマの定義
+schemes:
+- "http"
+
+# APIで使用する共通のレスポンス定義
+responses:
+  NotFound:
+    description: "エンティティが見つからない場合のエラー"
+    schema:
+      $ref: "#/definitions/ErrorResponse"
+
+# APIのエンドポイントと操作の定義
+paths:
+  /todos:
+    get:
+      summary: "すべての ToDo をリストアップ"
+      responses:
+        200:
+          description: "成功"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/ToDo"
+    post:
+      summary: "新しい ToDo を追加"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "ToDoオブジェクト"
+        required: true
+        schema:
+          $ref: "#/definitions/ToDo"
+      responses:
+        201:
+          description: "作成成功"
+          schema:
+            $ref: "#/definitions/ToDo"
+
+# モデルの定義
+definitions:
+  ToDo:
+    type: "object"
+    required:
+    - "id"
+    - "task"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      task:
+        type: "string"
+      completed:
+        type: "boolean"
+  ErrorResponse:
+    type: "object"
+    properties:
+      message:
+        type: "string"
