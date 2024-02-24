@@ -1,0 +1,23 @@
+// AddTodo.scss
+.add-todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  
+    input {
+      flex-grow: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+  
+    button {
+      background-color: #008000;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  

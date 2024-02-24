@@ -1,0 +1,11 @@
+{
+  "semi": true,                // 行末にセミコロンを付ける
+  "trailingComma": "es5",      // オブジェクトや配列の末尾にカンマを付ける(es5互換)
+  "singleQuote": true,         // シングルクオートを使用する
+  "printWidth": 80,            // 1行の最大文字数
+  "tabWidth": 2,               // タブの幅
+  "useTabs": false,            // タブの代わりにスペースを使う
+  "bracketSpacing": true,      // オブジェクトリテラルの括弧にスペースを入れる
+  "jsxBracketSameLine": false, // JSXの閉じタグを次の行に置く
+  "arrowParens": "avoid",      // 1つの引数を取るアロー関数の括弧を省略する
+}
