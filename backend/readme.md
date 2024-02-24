@@ -1,5 +1,14 @@
 [virttualenv](https://www.sejuku.net/blog/6839://www.sejuku.net/blog/68398)
 
+## 実行
+
+- 実行　python run.py
+
+## 早めにやる
+
+- VSCodeデバッグ環境
+- python run.py実行時,Swaggerの中身を表示できないエラー
+
 ## ToDo
 
 - OpenAPI Swagger
