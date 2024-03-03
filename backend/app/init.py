@@ -1,10 +1,13 @@
 # 役割：Flask アプリケーションのインスタンスを作成し、設定する。
 
 from flask import Flask
+from flask_cors import CORS
 from flask_swagger_ui import get_swaggerui_blueprint
 
 def create_app():
     app = Flask(__name__)
+    # すべてのドメインからのすべてのルートに対してCORSを許可
+    CORS(app, resources={r"/*": {"origins": "*"}})
 
     from .routes import main
     app.register_blueprint(main)

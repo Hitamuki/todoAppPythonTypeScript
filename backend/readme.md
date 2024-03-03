@@ -7,7 +7,7 @@
 ## 早めにやる
 
 - VSCodeデバッグ環境
-- python run.py実行時,Swaggerの中身を表示できないエラー
+- SwaggerのCORSエラー対策
 
 ## ToDo
 
